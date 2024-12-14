@@ -13,6 +13,15 @@ services:
       - ./postgres/:/docker-entrypoint-initdb.d/
     ports:
       - "5432:5432"
+  
+  app:
+    container_name: app
+    build:
+      dockerfile: ./Dockerfile
+      args:
+        database_url: "postgresql://program:test@postgres:5432/persons"
+    ports:
+      - "8000:8000"
 
 volumes:
   db-data:
