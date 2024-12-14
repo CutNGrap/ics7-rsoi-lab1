@@ -28,7 +28,7 @@ services:
         database_url: "postgresql://program:test@postgres:5432/persons"
     ports:
       - "8000:8000"
-     depends_on:
+    depends_on:
       #CHANGE 2: it prevents issuing a request while the server is starting to depend on the healthy status of postgres-db 
       postgres:
         condition: service_healthy
