@@ -16,7 +16,7 @@
 							"script": {
 								"exec": [
 									"pm.test('Get personId from location header', () => {",
-									"    pm.response.to.have.status(201)",
+									"    pm.response.to.have.status(205)",
 									"",
 									"    const request = JSON.parse(pm.request.body)",
 									"    pm.collectionVariables.set(\"name\", request.name)",
