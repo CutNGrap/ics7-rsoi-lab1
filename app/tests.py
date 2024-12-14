@@ -18,7 +18,7 @@ def test_positive_add_person():
     assert response.headers["Location"].split("/")[:-1] == ["", "api", "v1", "persons"]
 
 def test_negative_add_person():
-    response = client.post("/api/v1/persons", json={"name": "Alex", "work": "Street"})
+    response = client.post("/api/v1/persons", json={"work": "Street"})
     assert response.status_code == 400
     assert response.json()["message"] == "what"
 
