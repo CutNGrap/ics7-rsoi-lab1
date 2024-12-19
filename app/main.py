@@ -12,9 +12,9 @@ import os
 
 app = FastAPI()
 
-# "postgresql://program:test@localhost:5432/persons"
-# database_url = os.environ["DATABASE_URL"]
-database_url = "postgresql://program:test@localhost:5432/persons"
+# "postgresql://rsoibackend:thPbc3UBLYLKRU8p9ZUcgCpfFldCtzfu@dpg-cti0o2ggph6c73d3b0tg-a/persons_tq3y"
+# database_url = "postgresql://rsoibackend:thPbc3UBLYLKRU8p9ZUcgCpfFldCtzfu@dpg-cti0o2ggph6c73d3b0tg-a/persons_tq3y"
+database_url = os.environ["DATABASE_URL"]
 print(database_url)
 engine = create_engine(database_url)
 
