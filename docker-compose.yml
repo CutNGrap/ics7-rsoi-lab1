@@ -13,12 +13,6 @@ services:
       - ./postgres/:/docker-entrypoint-initdb.d/
     ports:
       - "5432:5432"
-    healthcheck:
-      #CHANGE 1: this command checks if the database is ready, right on the source db server
-      test: [ "CMD-SHELL", "pg_isready" ]
-      interval: 5s
-      timeout: 5s
-      retries: 5
   
   app:
     container_name: app
@@ -28,10 +22,6 @@ services:
         database_url: "postgresql://program:test@postgres:5432/persons"
     ports:
       - "8000:8000"
-    depends_on:
-      #CHANGE 2: it prevents issuing a request while the server is starting to depend on the healthy status of postgres-db 
-      postgres:
-        condition: service_healthy
 
 volumes:
   db-data:
