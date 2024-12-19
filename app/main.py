@@ -12,7 +12,7 @@ import os
 
 app = FastAPI()
 
-# "postgresql://rsoibackend:thPbc3UBLYLKRU8p9ZUcgCpfFldCtzfu@dpg-cti0o2ggph6c73d3b0tg-a/persons_tq3y"
+#"postgresql://rsoibackend:thPbc3UBLYLKRU8p9ZUcgCpfFldCtzfu@dpg-cti0o2ggph6c73d3b0tg-a/persons_tq3y"
 # database_url = "postgresql://rsoibackend:thPbc3UBLYLKRU8p9ZUcgCpfFldCtzfu@dpg-cti0o2ggph6c73d3b0tg-a/persons_tq3y"
 database_url = os.environ["DATABASE_URL"]
 print(database_url)
