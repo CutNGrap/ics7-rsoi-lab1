@@ -19,7 +19,7 @@ services:
     build:
       dockerfile: ./Dockerfile
       args:
-        database_url: postgresql://rsoibackend:thPbc3UBLYLKRU8p9ZUcgCpfFldCtzfu@dpg-cti0o2ggph6c73d3b0tg-a/persons_tq3y
+        database_url: postgresql://pgsql_km2s_user:zL8bxyjG9knQpjPZSDBpdR8TDHosPyV3@dpg-ctit1252ng1s73bf2a60-a.oregon-postgres.render.com/pgsql_km2s
     ports:
       - "8000:8000"
 

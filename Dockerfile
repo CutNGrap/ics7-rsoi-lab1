@@ -2,7 +2,7 @@ FROM python:3.10
 
 WORKDIR /code
 
-ARG database_url="postgresql://rsoibackend:thPbc3UBLYLKRU8p9ZUcgCpfFldCtzfu@localhost:5432/persons_tq3y"
+ARG database_url="postgresql://pgsql_km2s_user:zL8bxyjG9knQpjPZSDBpdR8TDHosPyV3@dpg-ctit1252ng1s73bf2a60-a.oregon-postgres.render.com/pgsql_km2s"
 
 ENV DATABASE_URL=$database_url
 
